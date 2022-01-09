@@ -13,7 +13,6 @@ bokeh = "*"
 requests = "*"
 numpy = "*"
 simplejson = "*"
-csv = "*"
 
 [dev-packages]
 
