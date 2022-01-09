@@ -6,4 +6,6 @@ altair
 bokeh
 requests
 numpy
-json
+simplejson
+os
+csv
