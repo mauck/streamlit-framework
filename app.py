@@ -1,19 +1,13 @@
-# This is from the streamlit get started tutorial
-# https://docs.streamlit.io/library/get-started/main-concepts
+# Sample Python Integration Code for Alpha Vantage
+# From:
+# https://medium.com/@patrick.collins_58673/stock-api-landscape-5c6e054ee631
 
-import streamlit as st
-import time
+import requests
+import json
 
-'Starting a long computation...'
+key = 'XXX'
+ticker = 'AAPL'
+url = 'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={}&apikey={}'.format(ticker, key)
 
-# Add a placeholder
-latest_iteration = st.empty()
-bar = st.progress(0)
-
-for i in range(100):
-	# Update the progress bar with each iteration.
-	latest_iteration.text(f'Iteration {i+1}')
-	bar.progress(i+1)
-	time.sleep(0.1)
-
-'...and now we\'re done!'
+response = requests.get(url)
+print(response.json())

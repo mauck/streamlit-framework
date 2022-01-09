@@ -12,6 +12,7 @@ altair = "*"
 bokeh = "*"
 requests = "*"
 numpy = "*"
+json = "*"
 
 [dev-packages]
 
